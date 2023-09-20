@@ -2,7 +2,10 @@ module github.com/codecrafters-io/grep-tester
 
 go 1.17
 
-require github.com/codecrafters-io/tester-utils v0.1.46
+require github.com/codecrafters-io/tester-utils v0.1.52
+
+// Uncomment to use local tester-utils
+// replace github.com/codecrafters-io/tester-utils => /Users/rohitpaulk/experiments/codecrafters/tester-utils
 
 require (
 	github.com/davecgh/go-spew v1.1.0 // indirect

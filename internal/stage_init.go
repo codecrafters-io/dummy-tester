@@ -6,12 +6,10 @@ import (
 	tester_utils "github.com/codecrafters-io/tester-utils"
 )
 
-// Example from the grep course
 func testInit(stageHarness *tester_utils.StageHarness) error {
-	// should exit with 0: echo "dog" | grep -E "d"
-	stageHarness.Logger.Infof("$ echo \"%s\" | ./script.sh -E \"%s\"", "dog", "d")
+	stageHarness.Logger.Infof("$ ./script.sh echo 1")
 
-	result, err := stageHarness.Executable.RunWithStdin([]byte("dog"), "-E", "d")
+	result, err := stageHarness.Executable.Run("echo", "1")
 	if err != nil {
 		return err
 	}
@@ -20,20 +18,12 @@ func testInit(stageHarness *tester_utils.StageHarness) error {
 		return fmt.Errorf("expected exit code %v, got %v", 0, result.ExitCode)
 	}
 
-	stageHarness.Logger.Successf("✓ Received exit code %d.", 0)
+	stageHarness.Logger.Successf("✓ Received exit code 0.")
 
-	// should exit with 1: echo "dog" | grep -E "d"
-	stageHarness.Logger.Infof("$ echo \"%s\" | ./script.sh -E \"%s\"", "dog", "f")
-
-	result, err = stageHarness.Executable.RunWithStdin([]byte("dog"), "-E", "f")
-	if err != nil {
-		return err
+	if string(result.Stdout) != "1\n" {
+		return fmt.Errorf("expected stdout %v, got %v", "1\n", result.Stdout)
 	}
 
-	if result.ExitCode != 1 {
-		return fmt.Errorf("expected exit code %v, got %v", 1, result.ExitCode)
-	}
-
-	stageHarness.Logger.Successf("✓ Received exit code %d.", 1)
+	stageHarness.Logger.Successf("✓ Received output 1")
 	return nil
 }
