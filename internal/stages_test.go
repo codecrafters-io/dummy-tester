@@ -3,13 +3,13 @@ package internal
 import (
 	"testing"
 
-	tester_utils "github.com/codecrafters-io/tester-utils"
+	tester_utils_testing "github.com/codecrafters-io/tester-utils/testing"
 )
 
 func TestStages(t *testing.T) {
-	testCases := map[string]tester_utils.TesterOutputTestCase{
+	testCases := map[string]tester_utils_testing.TesterOutputTestCase{
 		"init_failure": {
-			StageName:           "init",
+			StageSlugs:          []string{"init"},
 			CodePath:            "./test_helpers/scenarios/init/failure",
 			ExpectedExitCode:    1,
 			StdoutFixturePath:   "./test_helpers/fixtures/init/failure",
@@ -17,7 +17,7 @@ func TestStages(t *testing.T) {
 		},
 	}
 
-	tester_utils.TestTesterOutput(t, testerDefinition, testCases)
+	tester_utils_testing.TestTesterOutput(t, testerDefinition, testCases)
 }
 
 func normalizeTesterOutput(testerOutput []byte) []byte {
