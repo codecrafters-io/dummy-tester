@@ -6,7 +6,7 @@ This is a program that validates your progress on the "Build your own grep" chal
 
 - Following environment variables:
   - `CODECRAFTERS_SUBMISSION_DIR` - root of the user's code submission
-  - `CODECRAFTERS_TEST_CASES_JSON` - current stage the user is on
+  - `CODECRAFTERS_TEST_CASES_JSON` - list of tests cases, encoded as JSON
 
 ## User code requirements
 
