@@ -115,7 +115,8 @@ extensions:
       [xrange-command]: https://redis.io/commands/xrange/
 
 stages:
-  - slug: "init" # A identifier for this stage, needs to be unique within a course.
+  - legacy_slug: "init" # A identifier for this stage, needs to be unique within a course.
+    slug: "yz1" # A identifier for this stage, needs to be unique within a course.
 
     # The name of the stage. This is shown in the course catalog, and on other course pages.
     name: "The first stage"
@@ -146,11 +147,22 @@ stages:
 
       You program must ABCD.
 
+      Here's a sample table:
+
+      | Column 1 Header | Column 2 Header | Column 3 Header |
+      | --------------- | --------------- | --------------- |
+      | Row 1, Col 1    | Row 1, Col 2    | Row 1, Col 3    |
+      | Row 2, Col 1    | Row 2, Col 2    | Row 2, Col 3    |
+      | Row 3, Col 1    | Row 3, Col 2    | Row 3, Col 3    |
+
+      And a new edit that must be synced automatically
+
     # A description of this stage that is used on the course overview page and other marketing material. Markdown supported.
     marketing_md: |-
       In this stage, we'll do XYZ.
 
-  - slug: "second" # A identifier for this stage, needs to be unique within a course.
+  - legacy_slug: "second" # A identifier for this stage, needs to be unique within a course.
+    slug: "lr7" # A identifier for this stage, needs to be unique within a course.
 
     # The name of the stage. This is shown in the course catalog, and on other course pages.
     name: "The second stage"
@@ -185,7 +197,8 @@ stages:
     marketing_md: |-
       In this stage, we'll do XYZ.
 
-  - slug: "ext1-stage1" # A identifier for this stage, needs to be unique within a course.
+  - legacy_slug: "ext1-stage1" # A identifier for this stage, needs to be unique within a course.
+    slug: "qh7" # A identifier for this stage, needs to be unique within a course.
 
     primary_extension_slug: "ext1"
 
@@ -222,7 +235,8 @@ stages:
     marketing_md: |-
       In this stage, we'll do XYZ.
 
-  - slug: "ext1-stage2" # A identifier for this stage, needs to be unique within a course.
+  - legacy_slug: "ext1-stage2" # A identifier for this stage, needs to be unique within a course.
+    slug: "wd5" # A identifier for this stage, needs to be unique within a course.
 
     primary_extension_slug: "ext1"
 
@@ -259,7 +273,8 @@ stages:
     marketing_md: |-
       In this stage, we'll do XYZ.
 
-  - slug: "ext2-stage1" # A identifier for this stage, needs to be unique within a course.
+  - legacy_slug: "ext2-stage1" # A identifier for this stage, needs to be unique within a course.
+    slug: "ae0" # A identifier for this stage, needs to be unique within a course.
 
     primary_extension_slug: "ext2"
 
@@ -296,7 +311,8 @@ stages:
     marketing_md: |-
       In this stage, we'll do XYZ.
 
-  - slug: "ext2-stage2" # A identifier for this stage, needs to be unique within a course.
+  - legacy_slug: "ext2-stage2" # A identifier for this stage, needs to be unique within a course.
+    slug: "um4" # A identifier for this stage, needs to be unique within a course.
 
     primary_extension_slug: "ext2"
     secondary_extension_slugs: ["ext1"]
