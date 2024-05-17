@@ -1,4 +1,4 @@
-[33m[stage-1] [0m[94mRunning tests for Stage #1: init[0m
+[33m[stage-1] [0m[94mRunning tests for Stage #1: yz1[0m
 [33m[stage-1] [0m[94m$ ./script.sh echo 1[0m
 [33m[stage-1] [0m[92m✓ Received exit code 0.[0m
 [33m[stage-1] [0m[91mexpected stdout 1[0m
