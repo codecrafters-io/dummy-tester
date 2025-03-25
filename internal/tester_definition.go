@@ -6,7 +6,7 @@ import (
 
 var testerDefinition = tester_definition.TesterDefinition{
 	AntiCheatTestCases: []tester_definition.TestCase{},
-	ExecutableFileName: "script.sh",
+	ExecutableFileName: "your_program.sh",
 	TestCases: []tester_definition.TestCase{
 		{
 			Slug:     "ah7",
