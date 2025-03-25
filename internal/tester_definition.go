@@ -9,7 +9,7 @@ var testerDefinition = tester_definition.TesterDefinition{
 	ExecutableFileName: "script.sh",
 	TestCases: []tester_definition.TestCase{
 		{
-			Slug:     "yz1",
+			Slug:     "ah7",
 			TestFunc: testInit,
 		},
 		{
